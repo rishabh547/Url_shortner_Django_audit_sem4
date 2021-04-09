@@ -1,9 +1,34 @@
 {% extends 'nav.html' %}
-
+{% load static %}
 {% block content %}
 
-<h1 class="text-center">Home</h1>
+<!-- <h1 class="text-center">Home</h1> -->
+<section id="hero" class="hero d-flex align-items-center">
 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1>URLs, when the shorter the better !</h1>
+          <h2 >Shorten any links and access them anywhere for free</h2>
+          <div >
+            <div class="text-center text-lg-start">
+              <a href="{% url 'dashboard' %}" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span >Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" >
+          <img src="{% static 'img/URL_image.PNG' %}" class="img-fluid" alt="Image">
+        </div>
+      </div>
+    </div>
+
+  </section>
+<!-- <div class ="col-md-6 text-center">
+    <img src='https://i.postimg.cc/JtgQvgqL/URL-image.png'  alt='Shorten your URL' class ="img-fluid" styles="height:300px;width:300px;"/>
+</div> -->
 
 {% if error %}
 
