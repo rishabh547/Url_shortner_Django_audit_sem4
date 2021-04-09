@@ -17,7 +17,7 @@ def login(request):
                         return redirect(request.POST.get('next'))
                     else:
                         return redirect('/')
-                    return redirect('/')
+                    return redirect('/dashboard')
                 except User.DoesNotExist:
                     return render(request, 'login.html', {'error': "User Doesn't Exist"})
             else:
@@ -43,7 +43,7 @@ def signup(request):
                         password=request.POST['password'],
                     )
                     messages.success(
-                        request, "Signup Successful <br> Login Here")
+                        request, "Signup Successful Login Here")
                     return redirect(login)
             else:
                 return render(request, 'signup.html', {'error': "Empty Fields"})
