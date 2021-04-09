@@ -19,3 +19,4 @@ The users can SignUp to create a new account or login into existing account.<br>
 #### 3. SignUp
 ![SignUp Page](https://github.com/rishabh547/Url_shortner_Django_audit_sem4/blob/main/images/signup.PNG)
 #### 4. Dashboard and Working
+![Dashboard working](https://github.com/rishabh547/Url_shortner_Django_audit_sem4/blob/main/images/working.gif)
