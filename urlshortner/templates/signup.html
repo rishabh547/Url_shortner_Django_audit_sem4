@@ -1,0 +1,65 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
+<div class="form_class">
+    <div class="Register_form">
+        <div class="container-fluid">
+
+            <h2 class="text-center">Signup </h2>
+            {% if error %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ error }}
+
+                <button type="button" class="close" data-dismiss="alert" area-label="Close">
+                    <span area-hidden-true>&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            <form action="{% url 'signup' %}" method="POST">
+                <div class="formInput">
+                    {% csrf_token  %}
+                    <div class="formChildren">
+                        <input type="text" class="form-control" name="username" placeholder="Username" id="">
+                    </div>
+                    <div class="formChildren">
+                        <input type="email" class="form-control" name="email" autocomplete="off" placeholder="Email"
+                            id="">
+                    </div>
+                    <div class="formChildren">
+                        <input type="password" class="form-control" name="password" placeholder="Password" id="">
+                    </div>
+                    <div class="formChildren">
+                        <input type="password" class="form-control" name="password2" placeholder="Confirm Password"
+                            id="">
+                    </div>
+                    <div class="formChildren">
+                        <div class="Button_Center">
+                            <input type="submit" class="Continue value=" Signup">
+                        </div>
+                        <div class="Button_Center">
+                            <a class="card-link" href="{% url 'login' %}">Already Registered ? Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>
+
+</body>
+
+</html>
+
+{% endblock %}
