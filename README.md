@@ -4,6 +4,8 @@ Convert and short your URL links efficiently with any text you want or just rand
 This web application is built using Django and Bootstrap.
 The users can SignUp to create a new account or login into existing account.<br>As soon the user is logged in,he is redirected to the dashboard where he can shorten the URLs as he want
 
+### Find the running link for the web application
+http://krutikabhatt.pythonanywhere.com/
 ### To run the program 
 ```
 1. git clone https://github.com/rishabh547/Url_shortner_Django_audit_sem4/
